@@ -1,0 +1,189 @@
+:root {
+  font-family: sans-serif; /* fonte padrão para o documento */
+  font-size: 16px; /* Dtamanho padrão da fonte */
+}
+
+/* Reset de estilos para os elementos */
+html,
+body,
+div,
+header,
+main,
+footer,
+form,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+ol,
+li {
+  margin: 0; /* Remove margens */
+  border: 0; /* Remove bordas */
+  padding: 0; /* Remove preenchimento */
+  box-sizing: border-box; /* Define a caixa como "border-box" */
+}
+
+html,
+body {
+  width: 100vw; /* largura como 100% da viewport */
+  min-height: 100vh; /* altura mínima como 100% da viewport */
+}
+
+#page-container {
+  min-height: 100vh; /* altura mínima como 100% da viewport */
+  display: flex; /* Exibe os elementos filhos em layout flexível */
+  flex-direction: column; /* Os elementos filhos são empilhados verticalmente */
+}
+
+header,
+main,
+footer {
+  padding: 16px; /* preenchimento interno */
+}
+
+header,
+footer {
+  display: flex; /* Exibe os elementos filhos em layout flexível */
+  justify-content: space-between; /* Distribui o espaço entre os elementos filhos */
+  align-items: center; /* Centraliza verticalmente os elementos filhos */
+  color: #fff; /* cor do texto= branco */
+  background-color: navy; /*cor de fundo= azul-marinho */
+}
+
+.logo-text {
+  font-size: 1.2rem; /* tamanho da fonte como 1.2 rem (20% maior) */
+  font-weight: bold; /* deixa a fonte em negrito */
+}
+
+nav {
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  gap: 8px; /* espaçamento entre elementos filhos */
+}
+
+nav > a {
+  color: #fff; /* cor do texto= branco */
+  text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+}
+
+nav > a:hover {
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+}
+
+main {
+  flex: 1; /* Ocupa o espaço restante verticalmente */
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  flex-direction: column; /* Os elementos filhos são empilhados verticalmente */
+  align-items: center; /* Centraliza verticalmente os elementos filhos */
+  justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+  gap: 32px; /* Define o espaçamento entre os elementos filhos como 32 pixels */
+}
+
+#cards-container {
+  width: 100%; /* Define a largura como 100% */
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  gap: 16px; /* Define o espaçamento entre os elementos filhos como 16 pixels */
+  flex-wrap: wrap; /* Faz com que os elementos "caiam" quando a página é minimizada */
+  flex-direction: row; /* Os elementos filhos são dispostos em uma linha */
+  justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+  list-style: none; /* Remove os marcadores de lista */
+}
+
+#cards-container > li {
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  padding: 8px; /* Define o preenchimento interno de 8 pixels */
+  gap: 8px; /* Define o espaçamento entre os elementos filhos como 8 pixels */
+  flex-direction: column; /* Os elementos filhos são empilhados verticalmente */
+  border-radius: 16px; /* Define o raio das bordas como 16 pixels */
+  border: 2px solid navy; /* Define a borda como 2 pixels sólidos na cor azul-marinho */
+  background-color: white; /* Define a cor de fundo como branco */
+}
+
+#cards-container > li > img {
+  width: 320px; /* Define a largura como 320 pixels */
+  border-radius: 8px; /* Define o raio das bordas como 8 pixels */
+  aspect-ratio: 4/3; /* Define a proporção de aspecto da imagem como 4:3 */
+  display: block; /* Exibe a imagem como um bloco */
+  background-color: #e8e8e8; /* Define a cor de fundo como cinza claro */
+}
+
+#cards-container > li > h3 {
+  font-size: 1.2rem; /* Define o tamanho da fonte como 1.2 rem */
+  font-weight: normal; /* Define o estilo da fonte como normal */
+  font-style: italic; /* Define o estilo da fonte como itálico */
+  color: navy; /* Define a cor do texto como azul-marinho */
+}
+
+#cards-container > li > .card-details {
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  gap: 8px; /* Define o espaçamento entre os elementos filhos como 8 pixels */
+  justify-content: space-between; /* Distribui o espaço entre os elementos filhos */
+}
+
+#cards-container > li > .card-details > .price {
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  flex-direction: column; /* Os elementos filhos são empilhados verticalmente */
+  gap: 4px; /* Define o espaçamento entre os elementos filhos como 4 pixels */
+}
+
+#cards-container > li > .card-details > .price > h4 {
+  font-size: 0.8rem; /* Define o tamanho da fonte como 0.8 rem */
+  font-weight: normal; /* Define o estilo da fonte como normal */
+}
+
+#cards-container > li > .card-details > .price > p {
+  font-size: 1.2rem; /* Define o tamanho da fonte como 1.2 rem */
+  font-weight: bold; /* Define o estilo da fonte como negrito */
+}
+
+#cards-container > li > .card-details > a {
+  padding: 8px 16px; /* Define o preenchimento interno de 8 pixels na vertical e 16 pixels na horizontal */
+  border-radius: 8px; /* Define o raio das bordas como 8 pixels */
+  text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+  color: white; /* Define a cor do texto como branco */
+  background-color: red; /* Define a cor de fundo como vermelho */
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+  align-items: center; /* Centraliza verticalmente os elementos filhos */
+}
+
+form {
+  width: 1046px; /* Define a largura como 1046 pixels */
+  max-width: calc(100vw - 64px); /* Define a largura máxima como 100% da viewport menos 64 pixels */
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  align-items: center; /* Centraliza verticalmente os elementos filhos */
+  gap: 16px; /* Define o espaçamento entre os elementos filhos como 16 pixels */
+  color: navy; /* Define a cor do texto como azul-marinho */
+  font-weight: bold; /* Define o estilo da fonte como negrito */
+  flex-wrap: wrap; /* Faz com que os elementos "caiam" quando não couberem em uma única linha */
+}
+
+form input {
+  border-color: gray; /* borda como cinza */
+  border-radius: 8px; /* arredonda bordas */
+  padding: 8px; /* preenchimento interno de 8 pixels */
+}
+
+form input[type="text"] {
+  flex-grow: 1; /* Faz com que o campo de entrada de texto ocupe todo o espaço disponível horizontalmente */
+}
+
+form input[type="date"] {
+  min-width: 128px; /* Define a largura mínima */
+}
+
+form button[type="submit"] {
+  padding: 8px 16px; /* Define o preenchimento interno de 8 pixels na vertical e 16 pixels na horizontal */
+  border-radius: 8px; /* Define o raio das bordas como 8 pixels */
+  text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+  color: white; /* Define a cor do texto como branco */
+  background-color: red; /* Define a cor de fundo como vermelho */
+  display: flex; /* Exibe os elementos filhos em um layout flexível */
+  justify-content: center; /* Centraliza horizontalmente os elementos filhos */
+  align-items: center; /* Centraliza verticalmente os elementos filhos */
+}
